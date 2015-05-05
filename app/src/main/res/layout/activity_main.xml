@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/add"
+    android:background="@mipmap/kulki4">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/kulkson"
+        android:id="@+id/kulkson"
+        style="@style/Glowna"
+        android:textStyle="bold"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/table">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nowa gra"
+            android:id="@+id/nowa_gra"
+            android:layout_gravity="bottom"
+            android:background="@drawable/prostokat"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Opcje"
+            android:id="@+id/opcje"
+            android:layout_gravity="bottom"
+            android:background="@drawable/prostokat"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Wyniki"
+            android:id="@+id/wyniki"
+            android:layout_gravity="bottom"
+            android:background="@drawable/prostokat"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Wyjście"
+            android:id="@+id/wyjscie"
+            android:layout_gravity="bottom"
+            android:background="@drawable/prostokat"
+            android:layout_weight="1" />
+    </TableRow>
+
+</RelativeLayout>

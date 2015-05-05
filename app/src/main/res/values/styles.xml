@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ButtonMenu" parent="@android:style/TextAppearance">
+        <item name="android:textSize">900sp</item>
+    </style>
+    <style name="Glowna" parent="@android:style/TextAppearance">
+        <item name="android:text">KULKSON</item>
+        <item name="android:textColorHighlight">#234923</item>>
+        <item name="android:textSize">80sp</item>
+        <item name="android:textColor">#ffffff</item> //ffac2400
+        <item name="android:typeface">serif</item>
+    </style>
+
+</resources>

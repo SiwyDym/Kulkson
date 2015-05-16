@@ -10,7 +10,7 @@ import android.view.View;
  * Created by Marco on 2015-04-11.
  */
 public class KEngine {
-    //zmiana
+    //zmiana nowa
 
     public static final int GAME_THREAD_DELAY = 4000;
     public static final int MENU_BUTTON_ALPHA = 0;

@@ -15,7 +15,7 @@ public class KGameRenderer implements Renderer {
 
 
     private KBackground background = new KBackground();
-    private KBackground background2 = new KBackground();//nowa instancja klasy KGameRenderer
+    //private KBackground background2 = new KBackground();//nowa instancja klasy KGameRenderer
     private KGoodGuy player1=new KGoodGuy();
 
     //zmienne dla przeciwników ...
@@ -300,7 +300,11 @@ public class KGameRenderer implements Renderer {
 
 
     }
-
+    //private void detectCollisions(){
+    //    for(int y=0;y<2;y++){
+    //        if((enemies[y]).posX)
+    //    }
+   // }
 
 }
 

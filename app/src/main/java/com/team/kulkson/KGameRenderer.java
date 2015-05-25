@@ -18,7 +18,7 @@ public class KGameRenderer implements Renderer {
     private KBackground background2 = new KBackground();//nowa instancja klasy KGameRenderer
     private KGoodGuy player1=new KGoodGuy();
 
-    //zmienne dla przeciwników
+    //zmienne dla przeciwników ...
 
 
 

@@ -4,9 +4,87 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.team.kulkson.activity_opcje$PlaceholderFragment">
+    tools:context="com.team.kulkson.activity_opcje$PlaceholderFragment"
+    android:background="@drawable/kulki4"
+    android:id="@+id/aaa">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:text="Dźwięk"
+        android:id="@+id/dzwiek"
+        android:layout_gravity="center"
+        android:checked="true"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/zolty"
+        android:layout_alignStart="@+id/zolty" />
 
+    <TextView
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:text="KOLOR KULKSONA"
+        android:id="@+id/kolor_kulksona"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/dzwiek"
+        android:layout_alignLeft="@+id/dzwiek"
+        android:layout_alignStart="@+id/dzwiek" />
+
+    <CheckBox
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:text="ŻÓŁTY"
+        android:id="@+id/zolty"
+        android:layout_gravity="center"
+        android:checked="true"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/kolor_kulksona"
+        android:layout_alignLeft="@+id/niebieski"
+        android:layout_alignStart="@+id/niebieski" />
+
+    <CheckBox
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="CZERWONY"
+        android:id="@+id/czerwony"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_below="@+id/niebieski"
+        android:layout_alignLeft="@+id/niebieski"
+        android:layout_alignStart="@+id/niebieski"
+        android:layout_alignRight="@+id/dzwiek"
+        android:layout_alignEnd="@+id/dzwiek" />
+
+    <CheckBox
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="NIEBIESKI"
+        android:id="@+id/niebieski"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/zolty"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="131dp"
+        android:layout_height="35dp"
+        android:text="POWRÓT"
+        android:id="@+id/powrot"
+        android:layout_gravity="center"
+        android:layout_below="@+id/czerwony"
+        android:layout_alignLeft="@+id/niebieski"
+        android:layout_alignStart="@+id/niebieski" />
 </RelativeLayout>

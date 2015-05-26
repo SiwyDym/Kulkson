@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.os.Handler;
+
 
 /**
  * Created by xxxx on 2015-04-04.
@@ -27,7 +28,8 @@ public class MainMenu extends ActionBarActivity {
     // stowrzenie obiektów dla przycisków
     Button start=(Button) findViewById(R.id.nowa_gra);
     Button exit=(Button) findViewById(R.id.wyjscie);
-
+    Button opcje=(Button) findViewById(R.id.opcje);
+    Button wyniki=(Button) findViewById(R.id.wyniki);
    // start.setHapticFeedbackEnabled(Silnik.HAPTIC_BUTTON_FEEDBACK);
    // exit.setHapticFeedbackEnabled(Silnik.HAPTIC_BUTTON_FEEDBACK);
 
@@ -46,15 +48,66 @@ public class MainMenu extends ActionBarActivity {
     exit.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
-            boolean clean=false;
+            //Intent MainMenu=new Intent(getApplicationContext(), KExit.class);
+           // MainMenu.this.startActivity(MainMenu);
+
+
+
+
+          boolean clean=false;
             clean= silnik.onExit(v);
+
+            setContentView(R.layout.ekran_powitalny);// wyświetlenie ekranu powitalnego
+            new Handler().postDelayed(new Thread(){ //stowrzenie efektu rozmycia
+                @Override
+                public void run(){
+                    //Intent KExit=new Intent(MainMenu.this, KExit.class);
+                    //MainMenu.this.startActivity(KExit);
+                    MainMenu.this.finish();
+                    overridePendingTransition(R.layout.rozmycie_in,R.layout.rozmycie_out);
+                }
+            }, KEngine.GAME_THREAD_DELAY);
             if(clean)
             {
+
+
+
+
+
                 int pid=android.os.Process.myPid();
                 android.os.Process.killProcess(pid);
             }
         }
     });
+
+
+
+
+    opcje.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+           //setContentView(R.layout.activity_opcje);
+
+
+            Intent MainMenu=new Intent(getApplicationContext(), KOpcje.class);
+            MainMenu.this.startActivity(MainMenu);
+
+        }
+    });
+    wyniki.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent MainMenu= new Intent(getApplicationContext(), KScore.class);
+            MainMenu.this.startActivity(MainMenu);
+
+
+
+
+            //setContentView(R.layout.wyniki);
+        }
+    });
+
+
 
     KEngine.musicThread = new Thread(){
         public void run(){

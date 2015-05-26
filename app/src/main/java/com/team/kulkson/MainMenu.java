@@ -6,7 +6,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.os.Handler;
 
 
 /**
@@ -57,16 +56,9 @@ public class MainMenu extends ActionBarActivity {
           boolean clean=false;
             clean= silnik.onExit(v);
 
-            setContentView(R.layout.ekran_powitalny);// wyświetlenie ekranu powitalnego
-            new Handler().postDelayed(new Thread(){ //stowrzenie efektu rozmycia
-                @Override
-                public void run(){
-                    //Intent KExit=new Intent(MainMenu.this, KExit.class);
-                    //MainMenu.this.startActivity(KExit);
-                    MainMenu.this.finish();
-                    overridePendingTransition(R.layout.rozmycie_in,R.layout.rozmycie_out);
-                }
-            }, KEngine.GAME_THREAD_DELAY);
+
+
+
             if(clean)
             {
 

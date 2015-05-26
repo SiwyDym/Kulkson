@@ -1,6 +1,8 @@
 package com.team.kulkson;
 
+import android.app.AlertDialog;
 import android.opengl.GLSurfaceView.Renderer;
+import android.view.View;
 
 import java.util.Random;
 
@@ -306,14 +308,23 @@ public class KGameRenderer implements Renderer {
         gl.glPopMatrix();
         gl.glLoadIdentity();
 
-
-
-
     }
+    //okienko popup gdy występuje kolizja
+//    public void showAlert(View view){
+//        AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
+//        myAlert.setMessage("You dead!")
+//                .create();
+//
+//        myAlert.showAlert();
+//
+//    }
+
+    //sprawdzenie kolizji jeśli przeszkoda jest na pozycji Kulksona, to kolizja
     private void detectCollisions(){
        for(int y=0;y<2;y++){
-           if((enemies[y].posX <= (1.75f+1f))&& (KEngine.playerBankPosY<=1f)){
+           if((enemies[y].posX <= (1.75f+1f))&& (KEngine.playerBankPosY <= 1f)){
                    enemies[y].posX=(randomPos.nextFloat()*7)+7;
+                //show.alert
               
            }
        }

@@ -18,19 +18,12 @@
         </activity>
 
         <activity
-            android:screenOrientation="landscape"
             android:name=".activity_opcje"
             android:label="@string/title_activity_activity_opcje" >
         </activity>
-        <activity
 
-            android:name=".KScore"></activity>
-        <activity android:name=".KOpcje"></activity>
         <activity android:name=".MainMenu"></activity>
-
         <activity android:name=".KGame">
-
-
 
         </activity>
         <service android:name=".KMusic"></service>

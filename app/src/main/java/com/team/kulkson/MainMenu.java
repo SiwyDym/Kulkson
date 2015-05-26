@@ -16,6 +16,8 @@ public class MainMenu extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);//wyświetlenie menu
 
 
@@ -29,6 +31,8 @@ public class MainMenu extends ActionBarActivity {
     Button exit=(Button) findViewById(R.id.wyjscie);
     Button opcje=(Button) findViewById(R.id.opcje);
     Button wyniki=(Button) findViewById(R.id.wyniki);
+   // start.setHapticFeedbackEnabled(Silnik.HAPTIC_BUTTON_FEEDBACK);
+   // exit.setHapticFeedbackEnabled(Silnik.HAPTIC_BUTTON_FEEDBACK);
 
     //obsługa przycisku nowa gra
 
@@ -45,6 +49,8 @@ public class MainMenu extends ActionBarActivity {
     exit.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
+            //Intent MainMenu=new Intent(getApplicationContext(), KExit.class);
+           // MainMenu.this.startActivity(MainMenu);
 
 
 
@@ -64,6 +70,8 @@ public class MainMenu extends ActionBarActivity {
 
                 int pid=android.os.Process.myPid();
                 android.os.Process.killProcess(pid);
+
+
             }
         }
     });
@@ -74,7 +82,7 @@ public class MainMenu extends ActionBarActivity {
     opcje.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
-
+           //setContentView(R.layout.activity_opcje);
 
 
             Intent MainMenu=new Intent(getApplicationContext(), KOpcje.class);
@@ -91,7 +99,7 @@ public class MainMenu extends ActionBarActivity {
 
 
 
-
+            //setContentView(R.layout.wyniki);
         }
     });
 

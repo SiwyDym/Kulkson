@@ -17,7 +17,7 @@ public class KGameRenderer implements Renderer {
 
 
     private KBackground background = new KBackground();
-    //private KBackground background2 = new KBackground();//nowa instancja klasy KGameRenderer
+
     private KGoodGuy player1=new KGoodGuy();
 
     //zmienne dla przeciwników ...
@@ -40,7 +40,7 @@ public class KGameRenderer implements Renderer {
         //dodawanie nowych przeciwników tego typu do tablicy
 
             KEnemy kolce=new KEnemy(KEngine.TYPE_KOLCE);
-            //KEnemy kolce=new KEnemy(KEngine.TYPE_KOLCE, KEngine.ATTACK_RIGHT);
+
             enemies[0]=kolce;
 
     }
@@ -48,7 +48,7 @@ public class KGameRenderer implements Renderer {
     private void initializeBlok()
     {
 
-           // KEnemy blok=new KEnemy(KEngine.TYPE_BLOK,KEngine.ATTACK_RIGHT);
+
             KEnemy blok=new KEnemy(KEngine.TYPE_BLOK);
             enemies[1]=blok;
 
@@ -56,7 +56,7 @@ public class KGameRenderer implements Renderer {
 
 
     private  float bgScroll1;
-    //private  float bgScroll2;
+
 
     @Override
     public void onDrawFrame(GL10 gl){ //dla wyświetlenia nowej ramki
@@ -71,7 +71,7 @@ public class KGameRenderer implements Renderer {
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);//czyszczenie buforów OpenGL
 
         scrollBackground1(gl);
-        //scrollBackground2(gl);
+
         movePlayer(gl);
         moveEnemy(gl);
         //metody rysujące grtr TUTAJ
@@ -119,7 +119,7 @@ public class KGameRenderer implements Renderer {
         gl.glBlendFunc(GL10.GL_ONE, GL10.GL_ONE);
 
         background.loadTexture(gl, KEngine.BACKGROUND_LAYER_ONE,KEngine.context);
-       // background2.loadTexture(gl, KEngine.BACKGROUND_LAYER_TWO,KEngine.context);//wczytanie tekstury do background2
+
         player1.loadTexture(gl,KEngine.BALL,KEngine.context); //wczytanie tekstury kulki
         textureLoader=new KTextures(gl);
         spriteSheets1=textureLoader.loadTexture(gl, KEngine.CHARACTER_SHEET1, KEngine.context, 1);//wczytanie tekstury kolce
@@ -141,8 +141,8 @@ public class KGameRenderer implements Renderer {
 
         gl.glMatrixMode(GL10.GL_TEXTURE);
         gl.glLoadIdentity();
-       // gl.glTranslatef(0.0f, bgScroll1, 0.0f); //przewijanie tekstury
-        gl.glTranslatef(bgScroll1, 0.0f, 0.0f);
+
+        gl.glTranslatef(bgScroll1, 0.0f, 0.0f);  //przewijanie tekstury
         background.draw(gl); //rysowanie tła
         gl.glPopMatrix();    //odłożenie macierzy na stos
         bgScroll1 += KEngine.SCROLL_BACKGROUND_1;
@@ -155,15 +155,15 @@ public class KGameRenderer implements Renderer {
                     gl.glMatrixMode(GL10.GL_MODELVIEW);
                     gl.glLoadIdentity();
                     gl.glPushMatrix();
-                    gl.glScalef(.15f,.15f,1f);
+                    gl.glScalef(.1f,.1f,1f);
 
 
                     if(KEngine.boolflag==false) {
                         KEngine.playerBankPosY += KEngine.PLAYER_BANK_SPEED;
-                        if(KEngine.playerBankPosY>4f){
+                        if(KEngine.playerBankPosY>6f){
                             KEngine.boolflag=true;
                         }
-                        gl.glTranslatef(1.75f, KEngine.playerBankPosY, 0f);
+                        gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
 
 
 
@@ -171,10 +171,10 @@ public class KGameRenderer implements Renderer {
                     else{
                         if(KEngine.playerBankPosY>0) {
                             KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
-                            gl.glTranslatef(1.75f, KEngine.playerBankPosY, 0f);
+                            gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
                         }
                         else{
-                            gl.glTranslatef(1.75f, KEngine.playerBankPosY, 0f);
+                            gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
                             KEngine.playerFlightAction=0;
                             KEngine.boolflag=false;
 
@@ -195,8 +195,8 @@ public class KGameRenderer implements Renderer {
                     gl.glMatrixMode(GL10.GL_MODELVIEW); //przeskalowanie postaci gracza
                     gl.glLoadIdentity();
                     gl.glPushMatrix();
-                    gl.glScalef(.15f,.15f,1f);
-                    gl.glTranslatef(1.75f,KEngine.playerBankPosY,0f);
+                    gl.glScalef(.1f,.1f,1f);
+                    gl.glTranslatef(3f,KEngine.playerBankPosY,0f);
 
                     player1.draw(gl);
                     gl.glPopMatrix();
@@ -215,16 +215,11 @@ public class KGameRenderer implements Renderer {
         if(enemies[0].posX<-1)
         {
 
-            enemies[0].posX=(randomPos.nextFloat()*7)+7;
+            enemies[0].posX=(randomPos.nextFloat()*7)+5;
             if(enemies[0].posX < (enemies[1].posX+3) &&enemies[0].posX  >(enemies[1].posX)-3 ) {
                 enemies[0].posX+=4;
             }
-            //enemies[x].posX=15;
-            // enemies[x].isLockedOn=false;
-            //enemies[x].posT=KEngine.BLOK_SPEED;
-            //enemies[x].lockOnPosX=enemies[x].getNextScoutX();
-            // enemies[x].lockOnPosY=enemies[x].getNextScoutY();
-            //enemies[x].posY=3;
+
 
 
         }
@@ -237,12 +232,7 @@ public class KGameRenderer implements Renderer {
         {
             enemies[0].posX-=KEngine.KOLCE_SPEED;
         }
-                       /* else
-                        {
-                            enemies[x].posX=enemies[x].getNextScoutX();
-                            enemies[x].posY=enemies[x].getNextScoutY();
 
-                        }*/
 
         gl.glMatrixMode(GL10.GL_MODELVIEW);
         gl.glLoadIdentity();
@@ -266,13 +256,8 @@ public class KGameRenderer implements Renderer {
         if(enemies[1].posX<-1)
         {
 
-            enemies[1].posX=(randomPos.nextFloat()*7)+7;
-            // enemies[x].posX=5;
-                         /*   enemies[x].isLockedOn=false;
-                            enemies[x].posT=KEngine.BLOK_SPEED;
-                            enemies[x].lockOnPosX=enemies[x].getNextScoutX();
-                            enemies[x].lockOnPosY=enemies[x].getNextScoutY();
-                            enemies[x].posY=3; */
+            enemies[1].posX=(randomPos.nextFloat()*7)+5;
+
              if(enemies[1].posX < (enemies[0].posX+3) &&enemies[1].posX  >(enemies[0].posX)-3 ) {
                  enemies[1].posX+=4;
              }
@@ -287,17 +272,12 @@ public class KGameRenderer implements Renderer {
             enemies[1].posX-=KEngine.BLOK_SPEED;
         }
 
-                    /*    else
-                        {
-                            enemies[x].posX=enemies[x].getNextScoutX();
-                            enemies[x].posY=enemies[x].getNextScoutY();
 
-                        } */
 
         gl.glMatrixMode(GL10.GL_MODELVIEW);
         gl.glLoadIdentity();
         gl.glPushMatrix();
-        //gl.glScalef(1f, 1f, 0.25f);
+
         gl.glScalef(.15f, .15f, 2f);
 
         gl.glTranslatef(enemies[1].posX, 0f, 0f);
@@ -322,11 +302,12 @@ public class KGameRenderer implements Renderer {
     //sprawdzenie kolizji jeśli przeszkoda jest na pozycji Kulksona, to kolizja
     private void detectCollisions(){
        for(int y=0;y<2;y++){
-           if((enemies[y].posX <= (1.75f+1f))&& (KEngine.playerBankPosY <= 1f)){
-                   enemies[y].posX=(randomPos.nextFloat()*7)+7;
-                //show.alert
-              
+           if((enemies[y].posX <= (2.67f) )&& (KEngine.playerBankPosY <= 1.4f)&&(enemies[y].posX > (1f))) {
+               enemies[y].posX = (randomPos.nextFloat() * 7) + 5;
+               //show.alert
            }
+
+
        }
    }
 

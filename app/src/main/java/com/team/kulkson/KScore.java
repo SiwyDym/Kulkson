@@ -27,6 +27,9 @@ public class KScore extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent game = new Intent(getApplicationContext(), MainMenu.class);
+                int pid2=android.os.Process.myPid();
+                android.os.Process.killProcess(pid2);
+
                 KScore.this.startActivity(game);
 
 

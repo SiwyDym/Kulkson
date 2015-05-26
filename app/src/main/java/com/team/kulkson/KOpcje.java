@@ -33,6 +33,9 @@ public class KOpcje extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent game= new Intent(getApplicationContext(), MainMenu.class);
+                int pid1=android.os.Process.myPid();
+                android.os.Process.killProcess(pid1);
+                
                 KOpcje.this.startActivity(game);
                 //setContentView(R.layout.activity_main);
 

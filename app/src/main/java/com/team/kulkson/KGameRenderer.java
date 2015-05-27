@@ -215,7 +215,7 @@ public class KGameRenderer implements Renderer {
         if(enemies[0].posX<-1)
         {
 
-            enemies[0].posX=(randomPos.nextFloat()*7)+5;
+            enemies[0].posX=(randomPos.nextFloat()*7)+7;
             if(enemies[0].posX < (enemies[1].posX+3) &&enemies[0].posX  >(enemies[1].posX)-3 ) {
                 enemies[0].posX+=4;
             }
@@ -256,7 +256,7 @@ public class KGameRenderer implements Renderer {
         if(enemies[1].posX<-1)
         {
 
-            enemies[1].posX=(randomPos.nextFloat()*7)+5;
+            enemies[1].posX=(randomPos.nextFloat()*7)+7;
 
              if(enemies[1].posX < (enemies[0].posX+3) &&enemies[1].posX  >(enemies[0].posX)-3 ) {
                  enemies[1].posX+=4;
@@ -303,7 +303,7 @@ public class KGameRenderer implements Renderer {
     private void detectCollisions(){
        for(int y=0;y<2;y++){
            if((enemies[y].posX <= (2.67f) )&& (KEngine.playerBankPosY <= 1.4f)&&(enemies[y].posX > (1f))) {
-               enemies[y].posX = (randomPos.nextFloat() * 7) + 5;
+               enemies[y].posX = (randomPos.nextFloat() * 7) + 7;
                //show.alert
            }
 

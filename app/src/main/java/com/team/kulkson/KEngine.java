@@ -29,10 +29,12 @@ public class KEngine {
     public static int playerFlightAction=0; //śledzenie akcji, które gracz wykonał, aby odpowiednio na nie odpowiedziec  w petli gry
     public static final int BALL=R.drawable.kula; // wskazanie na obrazek bohatera
     public static final int PLAYER_BANK_JUMP=1; //akcje postaci- skok
-    public static final float PLAYER_BANK_SPEED=.1f; //prędkośc poruszania
-    public static final float PLAYER_BANK_SPEED2=0.05f;
+    public static final float PLAYER_BANK_SPEED=.15f; //prędkośc poruszania
+    public static final float PLAYER_BANK_SPEED2=0.1f;
     public static float playerBankPosY=0f;
     public static boolean boolflag;
+    public static boolean boolflag1;
+    public static int wynik;
 
 
 
@@ -41,8 +43,8 @@ public class KEngine {
 
 
 
-    public static float KOLCE_SPEED = SCROLL_BACKGROUND_1*8f;//predkość poruszania pierwszego wroga
-    public static float BLOK_SPEED=SCROLL_BACKGROUND_1*10f;//predkość poruszania drugiego wroga
+    public static float KOLCE_SPEED = SCROLL_BACKGROUND_1*12f;//predkość poruszania pierwszego wroga
+    public static float BLOK_SPEED=SCROLL_BACKGROUND_1*15f;//predkość poruszania drugiego wroga
 
     public static final int TYPE_KOLCE=1;
     public static final int TYPE_BLOK=2;

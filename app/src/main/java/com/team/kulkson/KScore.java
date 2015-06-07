@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 /**
  * Created by xxxx on 2015-05-26.
  */
@@ -18,7 +20,10 @@ public class KScore extends ActionBarActivity {
 
         final KEngine silnik = new KEngine();
 
+
+
         // stowrzenie obiektów dla przycisków
+
 
         Button powrot1 = (Button) findViewById(R.id.powrot1);
 

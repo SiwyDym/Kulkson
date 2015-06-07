@@ -38,7 +38,7 @@ public class KEngine {
 
 
 
-    public static  int CHARACTER_SHEET1=R.drawable.blok;// wskazanie na obrazek przeciwnika1
+    public static  int CHARACTER_SHEET1=R.drawable.kolce1;// wskazanie na obrazek przeciwnika1
     public static  int CHARACTER_SHEET2=R.drawable.blok;// wskazanie na obrazek przeciwnika1
 
 

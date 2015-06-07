@@ -26,13 +26,13 @@ public class KScore extends ActionBarActivity {
 
 
         Button powrot1 = (Button) findViewById(R.id.powrot1);
-        //TextView tekst2=(TextView)findViewById(R.id.wynik2);
+        TextView tekst2=(TextView)findViewById(R.id.wynik2);
         TextView tekst=(TextView)findViewById(R.id.wynik);
 
        // tekst.addTextChangedListener(KEngine.pomocnicza);
 
-        //tekst2.setText("Najlepszy wynik: "+KEngine.najlepszy+" przeszkód");
-        tekst.setText("Aktualny wynik: "+KEngine.aktualny+" przeszkód");
+        tekst2.setText("Najlepszy wynik: "+KEngine.najlepszy);
+        tekst.setText("Aktualny wynik: "+KEngine.aktualny);
 
         powrot1.setOnClickListener(new View.OnClickListener() {
             @Override

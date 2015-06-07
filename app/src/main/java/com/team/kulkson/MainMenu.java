@@ -39,7 +39,7 @@ public class MainMenu extends ActionBarActivity {
     start.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
-            KEngine.wynik=0;
+            KEngine.aktualny=0;
         Intent game= new Intent(getApplicationContext(), KGame.class);
             MainMenu.this.startActivity(game);
         }

@@ -35,7 +35,7 @@ public class KEngine {
     public static float playerBankPosY=0f;
     public static boolean boolflag;
     public static boolean boolflag1;
-    public static int wynik;
+    //public static int wynik;
 
 
 
@@ -50,8 +50,12 @@ public class KEngine {
     public static final int TYPE_KOLCE=1;
     public static final int TYPE_BLOK=2;
 
-    public static final int aktualny=1;
-    public static final int najlepszy=2;
+    public static int aktualny=0;
+    public static int najlepszy=0;
+
+
+
+
 
     //zamknij wątek gry i wyjdź z niej
     public boolean onExit(View v){

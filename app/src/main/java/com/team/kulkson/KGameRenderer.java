@@ -257,7 +257,10 @@ public class KGameRenderer implements Renderer {
 
         if(enemy1.posX<-1)
         {
-            KEngine.wynik+=2;
+            KEngine.aktualny+=2;
+            if(KEngine.aktualny>KEngine.najlepszy){
+                KEngine.najlepszy=KEngine.aktualny;
+            }
             enemy1.posX=(randomPos.nextFloat()*7)+7;
             if(enemy1.posX < (enemy2.posX+3) &&enemy2.posX  >(enemy2.posX)-3 ) {
                 enemy1.posX+=4;
@@ -297,7 +300,10 @@ public class KGameRenderer implements Renderer {
 
         if(enemy2.posX<-1)
         {
-
+            KEngine.aktualny+=1;
+            if(KEngine.aktualny>KEngine.najlepszy){
+                KEngine.najlepszy=KEngine.aktualny;
+            }
             enemy2.posX=(randomPos.nextFloat()*7)+7;
 
              if(enemy2.posX < (enemy1.posX+3) &&enemy2.posX  >(enemy1.posX)-3 ) {
@@ -363,6 +369,7 @@ public class KGameRenderer implements Renderer {
             if((enemy2.posX <= (2.67f) )&& (KEngine.playerBankPosY <= 1.4f)&&(enemy2.posX > (1.1f))){
                    enemy2.posX = (randomPos.nextFloat() * 7) + 7;
                }
+
 
 
 

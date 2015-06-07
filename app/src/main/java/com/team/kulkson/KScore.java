@@ -31,8 +31,8 @@ public class KScore extends ActionBarActivity {
 
        // tekst.addTextChangedListener(KEngine.pomocnicza);
 
-        tekst2.setText("Najlepszy wynik: "+KEngine.najlepszy);
-        tekst.setText("Aktualny wynik: "+KEngine.aktualny);
+        tekst2.setText("Najlepszy wynik: "+MainActivity.najlepszy);
+        tekst.setText("Aktualny wynik: "+MainActivity.aktualny);
 
         powrot1.setOnClickListener(new View.OnClickListener() {
             @Override

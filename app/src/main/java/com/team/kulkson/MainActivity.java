@@ -9,7 +9,8 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends ActionBarActivity {
-
+    public static int aktualny=0;
+    public static int najlepszy=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

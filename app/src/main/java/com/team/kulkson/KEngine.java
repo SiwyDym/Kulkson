@@ -28,6 +28,7 @@ public class KEngine {
 
     public static int playerFlightAction=0; //śledzenie akcji, które gracz wykonał, aby odpowiednio na nie odpowiedziec  w petli gry
     public static final int BALL=R.drawable.kula; // wskazanie na obrazek bohatera
+
     public static final int PLAYER_BANK_JUMP=1; //akcje postaci- skok
     public static final float PLAYER_BANK_SPEED=.15f; //prędkośc poruszania
     public static final float PLAYER_BANK_SPEED2=0.1f;
@@ -49,6 +50,8 @@ public class KEngine {
     public static final int TYPE_KOLCE=1;
     public static final int TYPE_BLOK=2;
 
+    public static final int aktualny=1;
+    public static final int najlepszy=2;
 
     //zamknij wątek gry i wyjdź z niej
     public boolean onExit(View v){

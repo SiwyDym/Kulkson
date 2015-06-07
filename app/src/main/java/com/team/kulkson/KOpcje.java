@@ -6,12 +6,15 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
+
 
 /**
  * Created by xxxx on 2015-04-04.
  */
 public class KOpcje extends ActionBarActivity {
     @Override
+
     public void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
@@ -26,6 +29,12 @@ public class KOpcje extends ActionBarActivity {
         // stowrzenie obiektów dla przycisków
 
         Button powrot=(Button) findViewById(R.id.powrot);
+
+        CheckBox dzwiek=(CheckBox) findViewById(R.id.dzwiek);
+
+        //dzwiek.set
+
+
 
 
 

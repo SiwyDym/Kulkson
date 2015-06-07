@@ -8,22 +8,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="25 przeszkód"
         android:id="@+id/wynik"
         android:layout_weight="0.05"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:textSize="45dp"
-        android:layout_below="@+id/tekst"
+        android:textSize="35dp"
+        android:layout_below="@+id/wynik2"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NAJLEPSZY WYNIK"
-        android:id="@+id/tekst"
+        android:id="@+id/wynik2"
         android:layout_marginTop="42dp"
-        android:textSize="40dp"
+        android:textSize="35dp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:layout_alignParentTop="true"

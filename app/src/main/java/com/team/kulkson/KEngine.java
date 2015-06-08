@@ -47,7 +47,7 @@ public class KEngine {
 
 
     public static float KOLCE_SPEED = 0.024f;//predkość poruszania pierwszego wroga
-    public static float BLOK_SPEED=0.03f;//predkość poruszania drugiego wroga
+    public static float BLOK_SPEED=0.034f;//predkość poruszania drugiego wroga
 
     public static final int TYPE_KOLCE=1;
     public static final int TYPE_BLOK=2;

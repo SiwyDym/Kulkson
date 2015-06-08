@@ -76,8 +76,8 @@ int i=0;
         i++;
         if(i%300==0)
         {
-            KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2+0.005);
-            KEngine.PLAYER_BANK_SPEED= (float) (KEngine.PLAYER_BANK_SPEED+0.004);
+            KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2+0.007);
+            KEngine.PLAYER_BANK_SPEED= (float) (KEngine.PLAYER_BANK_SPEED+0.006);
             KEngine.KOLCE_SPEED= (float) (KEngine.KOLCE_SPEED+0.002);
             KEngine.BLOK_SPEED= (float) (KEngine.BLOK_SPEED+0.002);
         }

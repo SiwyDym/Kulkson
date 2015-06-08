@@ -39,6 +39,7 @@ public class MainMenu extends ActionBarActivity {
     start.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
+            MainActivity.aktualny=0;
         Intent game= new Intent(getApplicationContext(), KGame.class);
             MainMenu.this.startActivity(game);
         }

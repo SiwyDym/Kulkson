@@ -35,7 +35,8 @@ public class KEngine {
     public static float playerBankPosY=0f;
     public static boolean boolflag;
     public static boolean boolflag1;
-    public static int wynik;
+    public static boolean boolflag2;
+
 
 
 
@@ -44,8 +45,8 @@ public class KEngine {
 
 
 
-    public static float KOLCE_SPEED = SCROLL_BACKGROUND_1*12f;//predkość poruszania pierwszego wroga
-    public static float BLOK_SPEED=SCROLL_BACKGROUND_1*15f;//predkość poruszania drugiego wroga
+    public static float KOLCE_SPEED = 0.024f;//predkość poruszania pierwszego wroga
+    public static float BLOK_SPEED=0.03f;//predkość poruszania drugiego wroga
 
     public static final int TYPE_KOLCE=1;
     public static final int TYPE_BLOK=2;

@@ -27,12 +27,4 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="POWRÓT"
-        android:id="@+id/powrot1"
-        android:layout_below="@+id/wynik"
-        android:layout_centerHorizontal="true" />
-
 </RelativeLayout>

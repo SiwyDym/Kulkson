@@ -22,7 +22,7 @@ public class MainMenu extends ActionBarActivity {
 
 
 
-// he he he ale se zmieniam
+
 
    final KEngine silnik= new KEngine();
 

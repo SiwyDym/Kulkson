@@ -52,8 +52,7 @@ public class KEngine {
     public static final int TYPE_KOLCE=1;
     public static final int TYPE_BLOK=2;
 
-//    public static int aktualny=0;
-//    public static int najlepszy=0;
+
 
 
 

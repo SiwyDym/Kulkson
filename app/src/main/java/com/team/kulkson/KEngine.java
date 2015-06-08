@@ -27,7 +27,8 @@ public class KEngine {
     public static float SCROLL_BACKGROUND_1 = .002f;
 
     public static int playerFlightAction=0; //śledzenie akcji, które gracz wykonał, aby odpowiednio na nie odpowiedziec  w petli gry
-    public static final int BALL=R.drawable.kula; // wskazanie na obrazek bohatera
+    public static  int BALL=R.drawable.kula; // wskazanie na obrazek bohatera
+    //public static  int BALL;
 
     public static final int PLAYER_BANK_JUMP=1; //akcje postaci- skok
     public static  float PLAYER_BANK_SPEED=.15f; //prędkośc poruszania

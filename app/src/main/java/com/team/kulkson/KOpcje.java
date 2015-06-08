@@ -1,12 +1,10 @@
 package com.team.kulkson;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 
 
 /**
@@ -28,9 +26,10 @@ public class KOpcje extends ActionBarActivity {
 
         // stowrzenie obiektów dla przycisków
 
-        Button powrot=(Button) findViewById(R.id.powrot);
+        //Button powrot=(Button) findViewById(R.id.powrot);
 
         CheckBox dzwiek=(CheckBox) findViewById(R.id.dzwiek);
+
 
         //dzwiek.set
 
@@ -38,35 +37,78 @@ public class KOpcje extends ActionBarActivity {
 
 
 
-        powrot.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent game= new Intent(getApplicationContext(), MainMenu.class);
-                int pid1=android.os.Process.myPid();
-                android.os.Process.killProcess(pid1);
-                
-                KOpcje.this.startActivity(game);
-                //setContentView(R.layout.activity_main);
-
-
-            }
-
-
-        });
+//        powrot.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent game= new Intent(getApplicationContext(), MainMenu.class);
+//                int pid1=android.os.Process.myPid();
+//                android.os.Process.killProcess(pid1);
+//
+//                KOpcje.this.startActivity(game);
+//                //setContentView(R.layout.activity_main);
+//
+//
+//            }
 
 
 
 
 
-
-
-
-
-
-
-
-
+//            dzwiek.onCheckboxClicked(View view) {
+//
+//                boolean zaznaczony =((CheckBox)view).isChecked();
+//
+//                if(view.getId()==R.id.dzwiek) {
+//
+//                        int pid=android.os.Process.myPid();
+//                        android.os.Process.killProcess(pid);
+//
+//
+//                }
+//            }
+        //});
 
 
     }
+
+  //RadioButton radio1 = (RadioButton)findViewById(R.id.zolty);
+//    RadioButton radio2 = (RadioButton)findViewById(R.id.niebieski);
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        RadioButton radio1 = (RadioButton)findViewById(R.id.zolty);
+    RadioButton radio2 = (RadioButton)findViewById(R.id.niebieski);
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.zolty:
+                if (checked)
+                {
+                radio2.setChecked(false);
+                    radio1.setChecked(true);
+
+                    KEngine.BALL=R.drawable.kula;
+                }
+
+
+                    break;
+            case R.id.niebieski:
+                if (checked)
+                {
+                    radio1.setChecked(false);
+                    radio2.setChecked(true);
+
+                    KEngine.BALL=R.drawable.heliboy2;
+
+                }
+
+
+                    break;
+        }
+
+    }
+
+
+
+
 }

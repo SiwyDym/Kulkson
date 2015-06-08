@@ -30,12 +30,12 @@ public class KEngine {
     public static final int BALL=R.drawable.kula; // wskazanie na obrazek bohatera
 
     public static final int PLAYER_BANK_JUMP=1; //akcje postaci- skok
-    public static final float PLAYER_BANK_SPEED=.15f; //prędkośc poruszania
-    public static final float PLAYER_BANK_SPEED2=0.1f;
+    public static  float PLAYER_BANK_SPEED=.15f; //prędkośc poruszania
+    public static  float PLAYER_BANK_SPEED2=0.1f;
     public static float playerBankPosY=0f;
     public static boolean boolflag;
     public static boolean boolflag1;
-    //public static int wynik;
+    public static int wynik;
 
 
 

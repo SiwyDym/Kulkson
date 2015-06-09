@@ -22,7 +22,7 @@ public class MainMenu extends ActionBarActivity {
 
 
 
-// he he he ale se zmieniam
+
 
    final KEngine silnik= new KEngine();
 
@@ -40,6 +40,10 @@ public class MainMenu extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             MainActivity.aktualny=0;
+            KEngine.PLAYER_BANK_SPEED=.15f; //prędkośc poruszania
+            KEngine.PLAYER_BANK_SPEED2=0.1f;
+            KEngine.KOLCE_SPEED = 0.024f;//predkość poruszania pierwszego wroga
+            KEngine.BLOK_SPEED=0.03f;//predkość poruszania drugiego wroga
         Intent game= new Intent(getApplicationContext(), KGame.class);
             MainMenu.this.startActivity(game);
         }

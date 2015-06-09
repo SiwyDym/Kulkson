@@ -19,8 +19,8 @@
         android:textSize="18dp"
         android:textColor="#FFFFFF"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/zolty"
-        android:layout_alignStart="@+id/zolty" />
+        android:onClick="onCheckboxClicked"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="287dp"
@@ -35,56 +35,32 @@
         android:layout_alignLeft="@+id/dzwiek"
         android:layout_alignStart="@+id/dzwiek" />
 
-    <CheckBox
-        android:layout_width="214dp"
+    <RadioButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ŻÓŁTY"
+        android:text="Żółty"
         android:id="@+id/zolty"
-        android:layout_gravity="center"
-        android:checked="true"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:textColor="#FFFFFF"
         android:layout_below="@+id/kolor_kulksona"
-        android:layout_alignLeft="@+id/niebieski"
-        android:layout_alignStart="@+id/niebieski" />
-
-    <CheckBox
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="CZERWONY"
-        android:id="@+id/czerwony"
-        android:layout_gravity="center"
+        android:layout_alignLeft="@+id/kolor_kulksona"
+        android:layout_alignStart="@+id/kolor_kulksona"
         android:checked="false"
-        android:textSize="18dp"
-        android:textColor="#FFFFFF"
+        android:textSize="20dp"
         android:textStyle="bold"
-        android:layout_below="@+id/niebieski"
-        android:layout_alignLeft="@+id/niebieski"
-        android:layout_alignStart="@+id/niebieski"
-        android:layout_alignRight="@+id/dzwiek"
-        android:layout_alignEnd="@+id/dzwiek" />
+        android:textColor="#FFFFFF"
+        android:onClick="onRadioButtonClicked"
+        />
 
-    <CheckBox
-        android:layout_width="200dp"
+    <RadioButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NIEBIESKI"
+        android:text="Niebieski"
         android:id="@+id/niebieski"
-        android:layout_gravity="center"
         android:checked="false"
-        android:textStyle="bold"
-        android:textSize="18dp"
         android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:layout_below="@+id/zolty"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="131dp"
-        android:layout_height="35dp"
-        android:text="POWRÓT"
-        android:id="@+id/powrot"
-        android:layout_gravity="center"
-        android:layout_below="@+id/czerwony"
-        android:layout_alignLeft="@+id/niebieski"
-        android:layout_alignStart="@+id/niebieski" />
+        android:layout_alignLeft="@+id/zolty"
+        android:layout_alignStart="@+id/zolty"
+        android:onClick="onRadioButtonClicked"/>
 </RelativeLayout>

@@ -9,15 +9,19 @@
     android:id="@+id/aaa">
 
     <TextView
-        android:layout_width="287dp"
+        android:layout_width="450dp"
         android:layout_height="wrap_content"
         android:text="KOLOR KULKSONA"
         android:id="@+id/kolor_kulksona"
         android:layout_gravity="center"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="50dp"
         android:textColor="#FFFFFF"
-        android:layout_centerHorizontal="true" />
+        android:height="75dp"
+        android:hint="100"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -25,14 +29,14 @@
         android:text="Żółty"
         android:id="@+id/zolty"
         android:checked="false"
-        android:textSize="30dp"
+        android:textSize="40dp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:onClick="onRadioButtonClicked"
+        android:layout_marginTop="38dp"
         android:layout_below="@+id/kolor_kulksona"
-        android:layout_alignLeft="@+id/kolor_kulksona"
-        android:layout_alignStart="@+id/kolor_kulksona"
-        android:layout_marginTop="38dp" />
+        android:layout_alignLeft="@+id/niebieski"
+        android:layout_alignStart="@+id/niebieski" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -41,10 +45,9 @@
         android:id="@+id/niebieski"
         android:checked="false"
         android:textColor="#FFFFFF"
-        android:textSize="30dp"
+        android:textSize="40dp"
         android:textStyle="bold"
         android:onClick="onRadioButtonClicked"
         android:layout_below="@+id/zolty"
-        android:layout_alignLeft="@+id/zolty"
-        android:layout_alignStart="@+id/zolty" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

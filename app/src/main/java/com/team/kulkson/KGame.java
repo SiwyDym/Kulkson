@@ -26,7 +26,6 @@ public class KGame extends Activity { //dziedziczenie z klasy Activity
 
     }
 
-    @Override
     public void onCreate(Bundle savedInstanceBundle){
         super.onCreate(savedInstanceBundle);
         gameView = new KGameView(this, new KGameView.KGameInterface() {

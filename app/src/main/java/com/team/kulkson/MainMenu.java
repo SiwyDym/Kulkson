@@ -31,19 +31,18 @@ public class MainMenu extends ActionBarActivity {
     Button exit=(Button) findViewById(R.id.wyjscie);
     Button opcje=(Button) findViewById(R.id.opcje);
     Button wyniki=(Button) findViewById(R.id.wyniki);
-   // start.setHapticFeedbackEnabled(Silnik.HAPTIC_BUTTON_FEEDBACK);
-   // exit.setHapticFeedbackEnabled(Silnik.HAPTIC_BUTTON_FEEDBACK);
+
 
     //obsługa przycisku nowa gra
 
     start.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
-            MainActivity.aktualny=0;
-            KEngine.PLAYER_BANK_SPEED=.15f; //prędkośc poruszania
-            KEngine.PLAYER_BANK_SPEED2=0.1f;
-            KEngine.KOLCE_SPEED = 0.024f;//predkość poruszania pierwszego wroga
-            KEngine.BLOK_SPEED=0.03f;//predkość poruszania drugiego wroga
+            KEngine.aktualny=0;
+            KEngine.PLAYER_BANK_SPEED=0.2f; //prędkośc poruszania
+            KEngine.PLAYER_BANK_SPEED2=0.15f;
+            KEngine.KOLCE_SPEED = 0.03f;//predkość poruszania pierwszego wroga
+            KEngine.BLOK_SPEED=0.036f;//predkość poruszania drugiego wroga
         Intent game= new Intent(getApplicationContext(), KGame.class);
             MainMenu.this.startActivity(game);
         }
@@ -54,8 +53,7 @@ public class MainMenu extends ActionBarActivity {
     exit.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
-            //Intent MainMenu=new Intent(getApplicationContext(), KExit.class);
-           // MainMenu.this.startActivity(MainMenu);
+
 
 
 
@@ -82,7 +80,7 @@ public class MainMenu extends ActionBarActivity {
     opcje.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View v) {
-           //setContentView(R.layout.activity_opcje);
+
 
 
             Intent MainMenu=new Intent(getApplicationContext(), KOpcje.class);

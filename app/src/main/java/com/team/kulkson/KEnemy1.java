@@ -19,7 +19,7 @@ import javax.microedition.khronos.opengles.GL10;
  */
 public class KEnemy1 {
     public  float posX=0f;// współrzędna x wroga
-    //public  float posY=0f;// współrzędna y wroga
+
 
     public int enemyType=0;// jakiego typu jest wróg
 

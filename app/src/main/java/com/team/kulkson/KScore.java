@@ -14,16 +14,16 @@ public class KScore extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wyniki);
 
-        final KEngine silnik = new KEngine();
+        final KEngine silnik=new KEngine();
 
         TextView tekst2=(TextView)findViewById(R.id.wynik2);
         TextView tekst=(TextView)findViewById(R.id.wynik);
 
-       // tekst.addTextChangedListener(KEngine.pomocnicza);
 
-        tekst2.setText("Najlepszy wynik: "+MainActivity.najlepszy);
-        tekst.setText("Aktualny wynik: "+MainActivity.aktualny);
 
-//                KScore.this.startActivity(game);
+        tekst2.setText("Najlepszy wynik: "+KEngine.najlepszy);
+        tekst.setText("Aktualny wynik: "+KEngine.aktualny);
+
+
     }
 }

@@ -26,7 +26,7 @@ public class KOpcje extends ActionBarActivity {
 
         // stowrzenie obiektów dla przycisków
 
-        //Button powrot=(Button) findViewById(R.id.powrot);
+
 
         CheckBox dzwiek=(CheckBox) findViewById(R.id.dzwiek);
 

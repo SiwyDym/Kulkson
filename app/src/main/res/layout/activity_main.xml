@@ -34,7 +34,9 @@
             android:id="@+id/nowa_gra"
             android:layout_gravity="bottom"
             android:background="@drawable/prostokat"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0dp"
@@ -43,7 +45,9 @@
             android:id="@+id/opcje"
             android:layout_gravity="bottom"
             android:background="@drawable/prostokat"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0dp"
@@ -52,7 +56,9 @@
             android:id="@+id/wyniki"
             android:layout_gravity="bottom"
             android:background="@drawable/prostokat"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0dp"
@@ -61,7 +67,9 @@
             android:id="@+id/wyjscie"
             android:layout_gravity="bottom"
             android:background="@drawable/prostokat"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textStyle="bold" />
     </TableRow>
 
 </RelativeLayout>

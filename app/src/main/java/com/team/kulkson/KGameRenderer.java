@@ -268,9 +268,9 @@ int i=0;
             if(KEngine.aktualny>KEngine.najlepszy){
                 KEngine.najlepszy=KEngine.aktualny;
             }
-            enemy1.posX=(randomPos.nextFloat()*7)+5;
+            enemy1.posX=(randomPos.nextFloat()*7)+7;
             if(enemy1.posX < (enemy2.posX+3) &&enemy2.posX  >(enemy2.posX)-3 ) {
-                enemy1.posX+=2;
+                enemy1.posX+=3;
             }
 
 
@@ -313,10 +313,10 @@ int i=0;
             if(KEngine.aktualny>KEngine.najlepszy){
                 KEngine.najlepszy=KEngine.aktualny;
             }
-            enemy2.posX=(randomPos.nextFloat()*7)+5;
+            enemy2.posX=(randomPos.nextFloat()*7)+7;
 
              if(enemy2.posX < (enemy1.posX+3) &&enemy2.posX  >(enemy1.posX)-3 ) {
-                 enemy2.posX+=3;
+                 enemy2.posX+=5;
              }
         }
 

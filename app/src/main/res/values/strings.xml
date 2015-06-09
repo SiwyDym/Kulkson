@@ -14,6 +14,7 @@
     <string name="title_activity_activity_opcje">activity_opcje</string>
     <string name="title_activity_kdeath">KDeath</string>
     <string name="lose">PRZEGRAŁEŚ!</string>
+    <string name="result">WYNIKI:</string>
 
 
 </resources>

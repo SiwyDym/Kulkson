@@ -8,20 +8,6 @@
     android:background="@drawable/kulki4"
     android:id="@+id/aaa">
 
-    <CheckBox
-        android:layout_width="177dp"
-        android:layout_height="wrap_content"
-        android:text="Dźwięk"
-        android:id="@+id/dzwiek"
-        android:layout_gravity="center"
-        android:checked="true"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:textColor="#FFFFFF"
-        android:layout_alignParentTop="true"
-        android:onClick="onCheckboxClicked"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:layout_width="287dp"
         android:layout_height="wrap_content"
@@ -29,38 +15,36 @@
         android:id="@+id/kolor_kulksona"
         android:layout_gravity="center"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:textColor="#FFFFFF"
-        android:layout_below="@+id/dzwiek"
-        android:layout_alignLeft="@+id/dzwiek"
-        android:layout_alignStart="@+id/dzwiek" />
+        android:layout_centerHorizontal="true" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Żółty"
         android:id="@+id/zolty"
-        android:layout_below="@+id/kolor_kulksona"
-        android:layout_alignLeft="@+id/kolor_kulksona"
-        android:layout_alignStart="@+id/kolor_kulksona"
         android:checked="false"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:onClick="onRadioButtonClicked"
-        />
+        android:layout_below="@+id/kolor_kulksona"
+        android:layout_alignLeft="@+id/kolor_kulksona"
+        android:layout_alignStart="@+id/kolor_kulksona"
+        android:layout_marginTop="38dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Niebieski"
+        android:text="Heliboy"
         android:id="@+id/niebieski"
         android:checked="false"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:textStyle="bold"
+        android:onClick="onRadioButtonClicked"
         android:layout_below="@+id/zolty"
         android:layout_alignLeft="@+id/zolty"
-        android:layout_alignStart="@+id/zolty"
-        android:onClick="onRadioButtonClicked"/>
+        android:layout_alignStart="@+id/zolty" />
 </RelativeLayout>

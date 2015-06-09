@@ -8,6 +8,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Wyniki"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/wynik"
         android:layout_weight="0.05"
         android:textColor="#FFFFFF"
@@ -20,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/wynik2"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="130dp"
         android:textSize="35dp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"

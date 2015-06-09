@@ -264,7 +264,7 @@ int i=0;
 
         if(enemy1.posX<-1)
         {
-            KEngine.aktualny+=1;
+            KEngine.aktualny += 2;
             if(KEngine.aktualny>KEngine.najlepszy){
                 KEngine.najlepszy=KEngine.aktualny;
             }

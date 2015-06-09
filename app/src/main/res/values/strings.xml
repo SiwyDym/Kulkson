@@ -13,7 +13,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_activity_opcje">activity_opcje</string>
     <string name="title_activity_kdeath">KDeath</string>
-   
+    <string name="lose">PRZEGRAŁEŚ!</string>
 
 
 </resources>

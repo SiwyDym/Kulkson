@@ -32,7 +32,7 @@ public class KGame extends Activity { //dziedziczenie z klasy Activity
             @Override
             public void onColisionDetection() {
                 finish();
-                Intent intent = new Intent(KGame.this, KScore.class);
+                Intent intent = new Intent(KGame.this, KDeath.class);
                 startActivity(intent);
 
             }

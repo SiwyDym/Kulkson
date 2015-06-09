@@ -11,6 +11,7 @@
     <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,19 +22,24 @@
         <activity
             android:name=".activity_opcje"
             android:label="@string/title_activity_activity_opcje"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape">
         </activity>
         <activity
             android:name=".KScore"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape" />
         <activity
             android:name=".KOpcje"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="landscape" />
         <activity
             android:name=".MainMenu"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape" />
         <activity
             android:name=".KGame"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape">
         </activity>
 
@@ -41,6 +47,7 @@
 
         <activity
             android:name=".KDeath"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape"
             android:label="@string/title_activity_kdeath"></activity>
     </application>

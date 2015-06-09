@@ -3,7 +3,6 @@ package com.team.kulkson;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 
@@ -28,51 +27,15 @@ public class KOpcje extends ActionBarActivity {
 
 
 
-        CheckBox dzwiek=(CheckBox) findViewById(R.id.dzwiek);
-
-
-        //dzwiek.set
 
 
 
-
-
-//        powrot.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent game= new Intent(getApplicationContext(), MainMenu.class);
-//                int pid1=android.os.Process.myPid();
-//                android.os.Process.killProcess(pid1);
-//
-//                KOpcje.this.startActivity(game);
-//                //setContentView(R.layout.activity_main);
-//
-//
-//            }
-
-
-
-
-
-//            dzwiek.onCheckboxClicked(View view) {
-//
-//                boolean zaznaczony =((CheckBox)view).isChecked();
-//
-//                if(view.getId()==R.id.dzwiek) {
-//
-//                        int pid=android.os.Process.myPid();
-//                        android.os.Process.killProcess(pid);
-//
-//
-//                }
-//            }
-        //});
 
 
     }
 
-  //RadioButton radio1 = (RadioButton)findViewById(R.id.zolty);
-//    RadioButton radio2 = (RadioButton)findViewById(R.id.niebieski);
+
+
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?

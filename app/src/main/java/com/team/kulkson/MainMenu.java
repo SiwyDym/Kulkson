@@ -39,8 +39,8 @@ public class MainMenu extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             KEngine.aktualny=0;
-            KEngine.PLAYER_BANK_SPEED=0.2f; //prędkośc poruszania
-            KEngine.PLAYER_BANK_SPEED2=0.15f;
+            KEngine.PLAYER_BANK_SPEED=0.17f; //prędkośc poruszania
+            KEngine.PLAYER_BANK_SPEED2=0.12f;
             KEngine.KOLCE_SPEED = 0.03f;//predkość poruszania pierwszego wroga
             KEngine.BLOK_SPEED=0.036f;//predkość poruszania drugiego wroga
         Intent game= new Intent(getApplicationContext(), KGame.class);

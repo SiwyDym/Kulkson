@@ -42,26 +42,17 @@ public class KEngine {
     public static  int CHARACTER_SHEET1=R.drawable.kolce1;// wskazanie na obrazek przeciwnika1
     public static  int CHARACTER_SHEET2=R.drawable.blok;// wskazanie na obrazek przeciwnika1
 
-    <<<<<<<Updated upstream
 
+//    public static float KOLCE_SPEED = 0.024f;//predkość poruszania pierwszego wroga
+//    public static float BLOK_SPEED=0.034f;//predkość poruszania drugiego wroga
 
-    public static float KOLCE_SPEED = 0.024f;//predkość poruszania pierwszego wroga
-    public static float BLOK_SPEED=0.034f;//predkość poruszania drugiego wroga
-    =======
     public static float KOLCE_SPEED = SCROLL_BACKGROUND_1 * 12f;//predkość poruszania pierwszego wroga
     public static float BLOK_SPEED = SCROLL_BACKGROUND_1 * 15f;//predkość poruszania drugiego wroga
-    >>>>>>>
-    Stashed changes
-
-    public static final int TYPE_KOLCE=1;
-    public static final int TYPE_BLOK=2;
-
-    <<<<<<<Updated upstream
 
 
-    =======
-            >>>>>>>
-    Stashed changes
+    public static final int TYPE_KOLCE = 1;
+    public static final int TYPE_BLOK = 2;
+
     //zamknij wątek gry i wyjdź z niej
     public boolean onExit(View v){
         try{

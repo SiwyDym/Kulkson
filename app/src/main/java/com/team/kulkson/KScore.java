@@ -16,13 +16,6 @@ public class KScore extends ActionBarActivity {
 
         final KEngine silnik = new KEngine();
 
-        // stowrzenie obiektów dla przycisków
-        <<<<<<<Updated upstream
-
-
-        =======
-        Button powrot1 = (Button) findViewById(R.id.powrot1);
-        >>>>>>>Stashed changes
         TextView tekst2=(TextView)findViewById(R.id.wynik2);
         TextView tekst=(TextView)findViewById(R.id.wynik);
 
@@ -31,28 +24,6 @@ public class KScore extends ActionBarActivity {
         tekst2.setText("Najlepszy wynik: "+MainActivity.najlepszy);
         tekst.setText("Aktualny wynik: "+MainActivity.aktualny);
 
-//        powrot1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent game = new Intent(getApplicationContext(), MainMenu.class);
-//                int pid2 = android.os.Process.myPid();
-//                android.os.Process.killProcess(pid2);
-//
 //                KScore.this.startActivity(game);
-//
-//
-//            }
-
-        <<<<<<<Updated upstream
-
-        //});
-        =======
-        KScore.this.startActivity(game);
-    }
-
-
-});
-        >>>>>>>Stashed changes
-
     }
 }

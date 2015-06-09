@@ -28,47 +28,11 @@ public class KGameRenderer implements Renderer {
     KEngine silnik = new KEngine();
 
 
-    <<<<<<<Updated upstream
-
-    private KEnemy1 enemy1= new KEnemy1(KEngine.TYPE_KOLCE);
-    private KEnemy2 enemy2= new KEnemy2(KEngine.TYPE_BLOK);
-
-    private long loopStart=0;
-    private long loopEnd=0;
-    private long loopRunTime=0;
-
-int i=0;
-    private Random randomPos=new Random();
-
-//    private void initializeKolce()
-//    {
-        //dodawanie nowych przeciwników tego typu do tablicy
-
-//            KEnemy kolce=new KEnemy(KEngine.TYPE_KOLCE);
-//
-//            enemies[0]=kolce;
-
-
-//    }
-//
-//    private void initializeBlok()
-//    {
-
-
-//            KEnemy blok=new KEnemy(KEngine.TYPE_BLOK);
-//            enemies[1]=blok;
-
-   // }
-
-
-    private  float bgScroll1;
-    =======
     private KEnemy[] enemies = new KEnemy[2];
     //    private KEnemy1=new KEnemy1(1);
     //    private KEnemy2=new KEnemy2(2);
     private KEnemy1 enemy1 = new KEnemy1(KEngine.TYPE_KOLCE);
     private KEnemy2 enemy2 = new KEnemy2(KEngine.TYPE_BLOK);
-    private KTextures textureLoader;
     private int[] spriteSheets1 = new int[1];
     private int[] spriteSheets2 = new int[1];
     private long loopStart = 0;
@@ -82,9 +46,6 @@ int i=0;
     public KGameRenderer(KGameView.KGameInterface kGameInterface) {
         this.kGameInterface = kGameInterface;
     }
-
-    >>>>>>>
-    Stashed changes
 
 
     @Override
@@ -103,29 +64,14 @@ int i=0;
 
         movePlayer(gl);
         moveEnemy(gl);
+
         i++;
-        if(i%300==0)
-        {
-            KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2+0.007);
-            KEngine.PLAYER_BANK_SPEED= (float) (KEngine.PLAYER_BANK_SPEED+0.006);
-            KEngine.KOLCE_SPEED= (float) (KEngine.KOLCE_SPEED+0.002);
-            KEngine.BLOK_SPEED= (float) (KEngine.BLOK_SPEED+0.002);
-        }
-
-        <<<<<<<Updated upstream
-
-
-        =======
-        i++;
-
-    >>>>>>>
-    Stashed changes
         //metody rysujące grtr TUTAJ
         detectCollisions();
         gl.glEnable(GL10.GL_BLEND); //blendowanie przezroczystości
         gl.glBlendFunc(GL10.GL_ONE, GL10.GL_ONE_MINUS_SRC_ALPHA);
-    loopEnd=System.currentTimeMillis();
-    loopRunTime=((loopEnd-loopStart));
+        loopEnd = System.currentTimeMillis();
+        loopRunTime = ((loopEnd - loopStart));
     }
 
     @Override
@@ -198,22 +144,10 @@ int i=0;
                 gl.glPushMatrix();
                 gl.glScalef(.1f, .1f, 1f);
 
-                <<<<<<<Updated upstream
-
-
-                =======
-                >>>>>>>Stashed changes
 
                 if (KEngine.boolflag == false) {
                     KEngine.playerBankPosY += KEngine.PLAYER_BANK_SPEED;
 
-                    <<<<<<<Updated upstream
-                        if(KEngine.playerBankPosY>6f){
-                            KEngine.boolflag=true;
-                        }
-                        gl.glTranslatef(2f, KEngine.playerBankPosY, 0f);
-                    =======
-                    >>>>>>>Stashed changes
 
                     if (i % 900 == 0) {
                         KEngine.PLAYER_BANK_SPEED = (float) (KEngine.PLAYER_BANK_SPEED * 1.7);
@@ -224,176 +158,114 @@ int i=0;
                     if (KEngine.playerBankPosY > 6f) {
                         KEngine.boolflag = true;
                     }
-                    <<<<<<<Updated upstream
-                    else{
-                         if((enemy2.posX < (2f) )&&(enemy2.posX > (0.43f))) {
+                    gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
 
-                             if (KEngine.playerBankPosY > 1.6f) {
 
+                } else {
+                    if ((enemy2.posX <= (2.67f)) && (enemy2.posX > (1.1f))) {
+
+                        if (KEngine.playerBankPosY > 1.5f) {
+
+                            KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
+                            if (i % 900 == 0) {
+
+                                KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2 * 1.7);
                                 KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
+                            }
+                            gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
 
-                                 gl.glTranslatef(2f, KEngine.playerBankPosY, 0f);
-                                 =======
-                                 gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
+                        } else {
 
+                            gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
 
-                             } else {
-                                 if ((enemy2.posX <= (2.67f)) && (enemy2.posX > (1.1f))) {
+                            KEngine.playerFlightAction = 0;
+                            KEngine.boolflag = false;
 
-                                     if (KEngine.playerBankPosY > 1.5f) {
-                                         >>>>>>>Stashed changes
+                        }
+                    } else {
 
-                                         KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
-                                         if (i % 900 == 0) {
-
-                                             <<<<<<<Updated upstream
-                                 gl.glTranslatef(2f, KEngine.playerBankPosY, 0f);
-                                             =======
-                                             KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2 * 1.7);
-                                             KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
-                                         }
-                                         gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
-                                         >>>>>>>Stashed changes
-
-                                     } else {
-
-                                         gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
-
-                                         KEngine.playerFlightAction = 0;
-                                         KEngine.boolflag = false;
-
-                                         <<<<<<<Updated upstream
-                             if (KEngine.playerBankPosY > 0.1f) {
-                                 KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
-
-
-
-                                 gl.glTranslatef(2f, KEngine.playerBankPosY, 0f);
-                             }
-                                         =======
-                                     }
-                                 } else {
-
-                                     if (KEngine.playerBankPosY > 0) {
-                                         KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
-
-                                         if (i % 900 == 0) {
-                                             KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2 * 1.7);
-                                             KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
-                                         }
-                                         >>>>>>>Stashed changes
-
-                                         gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
-                                     } else {
-
-                                         <<<<<<<Updated upstream
-                                 gl.glTranslatef(2f, KEngine.playerBankPosY, 0f);
-                                 KEngine.playerFlightAction = 0;
-                                 KEngine.boolflag = false;
-
-
-                             }
-                                     =======
-                                     gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
-                                     KEngine.playerFlightAction = 0;
-                                     KEngine.boolflag = false;
-
-                                 }
-                                 >>>>>>>Stashed changes
-
-                    }
-                         }
-
-
-                        player1.draw(gl);
-                        gl.glPopMatrix();
-                        gl.glLoadIdentity();
-
-                        break;
-
-                        default:
-                            gl.glMatrixMode(GL10.GL_MODELVIEW); //przeskalowanie postaci gracza
-                            gl.glLoadIdentity();
-                            gl.glPushMatrix();
-                            gl.glScalef(.1f, .1f, 1f);
-//
-                            <<<<<<<Updated upstream
-                    if((enemy2.posX < (0.43))&&KEngine.playerBankPosY>0.1f){
-
-                        =======
-                        if ((enemy2.posX < (1.1)) && KEngine.playerBankPosY > 0) {
-                            >>>>>>>Stashed changes
-
-
-                            <<<<<<<Updated upstream
-
-
-                            gl.glTranslatef(2f, KEngine.playerBankPosY, 0f);
-                        KEngine.playerFlightAction=0;
-                        KEngine.boolflag1=true;
-                    }
-                    else {
-                        gl.glTranslatef(2f, KEngine.playerBankPosY, 0f);
-                        KEngine.boolflag1=false;
-
-                            =======
+                        if (KEngine.playerBankPosY > 0) {
                             KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
 
                             if (i % 900 == 0) {
                                 KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2 * 1.7);
                                 KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
-                                >>>>>>>Stashed changes
-                    }
+                            }
+
+                            gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
+                        } else {
 
                             gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
                             KEngine.playerFlightAction = 0;
-                            KEngine.boolflag1 = true;
-                        }else{
-                            gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
-                            KEngine.boolflag1 = false;
+                            KEngine.boolflag = false;
+
                         }
 
-
-                        player1.draw(gl);
-                        gl.glPopMatrix();
-                        gl.glLoadIdentity();
-                        break;
-        }
                     }
+                }
 
 
-                private void moveEnemy (GL10 gl){
+                player1.draw(gl);
+                gl.glPopMatrix();
+                gl.glLoadIdentity();
+
+                break;
+
+            default:
+                gl.glMatrixMode(GL10.GL_MODELVIEW); //przeskalowanie postaci gracza
+                gl.glLoadIdentity();
+                gl.glPushMatrix();
+                gl.glScalef(.1f, .1f, 1f);
+//
+                if ((enemy2.posX < (1.1)) && KEngine.playerBankPosY > 0) {
 
 
-                if (enemy1.posX < -1) {
-                    MainActivity.aktualny += 2;
-                    if (MainActivity.aktualny > MainActivity.najlepszy) {
-                        MainActivity.najlepszy = MainActivity.aktualny;
-            }
-                    enemy1.posX = (randomPos.nextFloat() * 7) + 7;
-                    if (enemy1.posX < (enemy2.posX + 3) && enemy2.posX > (enemy2.posX) - 3) {
-                        enemy1.posX += 4;
-            }
-        }
-
-                if (enemy1.posX >= -1) {
-                    enemy1.posX -= KEngine.KOLCE_SPEED;
+                    KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
 
                     if (i % 900 == 0) {
+                        KEngine.PLAYER_BANK_SPEED2 = (float) (KEngine.PLAYER_BANK_SPEED2 * 1.7);
+                        KEngine.playerBankPosY -= KEngine.PLAYER_BANK_SPEED2;
+                    }
 
-                        <<<<<<<Updated upstream
+                    gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
+                    KEngine.playerFlightAction = 0;
+                    KEngine.boolflag1 = true;
+                } else {
+                    gl.glTranslatef(3f, KEngine.playerBankPosY, 0f);
+                    KEngine.boolflag1 = false;
+                }
 
 
-        if(enemy1.posX>=-1)
-        {
-            enemy1.posX-=KEngine.KOLCE_SPEED;
-
-
-            =======
-            KEngine.KOLCE_SPEED = (float) (KEngine.KOLCE_SPEED * 1.2);
-            enemy1.posX -= KEngine.KOLCE_SPEED;
+                player1.draw(gl);
+                gl.glPopMatrix();
+                gl.glLoadIdentity();
+                break;
         }
-                        >>>>>>>Stashed changes
+    }
+
+
+    private void moveEnemy(GL10 gl) {
+
+
+        if (enemy1.posX < -1) {
+            MainActivity.aktualny += 2;
+            if (MainActivity.aktualny > MainActivity.najlepszy) {
+                MainActivity.najlepszy = MainActivity.aktualny;
+            }
+            enemy1.posX = (randomPos.nextFloat() * 7) + 7;
+            if (enemy1.posX < (enemy2.posX + 3) && enemy2.posX > (enemy2.posX) - 3) {
+                enemy1.posX += 4;
+            }
+        }
+
+        if (enemy1.posX >= -1) {
+            enemy1.posX -= KEngine.KOLCE_SPEED;
+
+            if (i % 900 == 0) {
+
+                KEngine.KOLCE_SPEED = (float) (KEngine.KOLCE_SPEED * 1.2);
+                enemy1.posX -= KEngine.KOLCE_SPEED;
+            }
         }
 
 
@@ -410,36 +282,25 @@ int i=0;
         gl.glLoadIdentity();
 
 
-                    if (enemy2.posX < -1) {
-                        MainActivity.aktualny += 1;
-                        if (MainActivity.aktualny > MainActivity.najlepszy) {
-                            MainActivity.najlepszy = MainActivity.aktualny;
+        if (enemy2.posX < -1) {
+            MainActivity.aktualny += 1;
+            if (MainActivity.aktualny > MainActivity.najlepszy) {
+                MainActivity.najlepszy = MainActivity.aktualny;
             }
-                        enemy2.posX = (randomPos.nextFloat() * 7) + 7;
+            enemy2.posX = (randomPos.nextFloat() * 7) + 7;
 
-                        if (enemy2.posX < (enemy1.posX + 3) && enemy2.posX > (enemy1.posX) - 3) {
-                            enemy2.posX += 6;
-                        }
+            if (enemy2.posX < (enemy1.posX + 3) && enemy2.posX > (enemy1.posX) - 3) {
+                enemy2.posX += 6;
+            }
         }
 
-                    if (enemy2.posX >= -1) {
-                        enemy2.posX -= KEngine.BLOK_SPEED;
+        if (enemy2.posX >= -1) {
+            enemy2.posX -= KEngine.BLOK_SPEED;
 
-                        <<<<<<<Updated upstream
-
-
-        if(enemy2.posX>=-1)
-        {
-
-            enemy2.posX-=KEngine.BLOK_SPEED;
-
-
-            =======
             if (i % 900 == 0) {
                 KEngine.BLOK_SPEED = (float) (KEngine.BLOK_SPEED * 1.2);
                 enemy2.posX -= KEngine.BLOK_SPEED;
             }
-            >>>>>>>Stashed changes
         }
         gl.glMatrixMode(GL10.GL_MODELVIEW);
         gl.glLoadIdentity();
@@ -455,32 +316,19 @@ int i=0;
     }
 
     //sprawdzenie kolizji jeśli przeszkoda jest na pozycji Kulksona, to kolizja
-                    <<<<<<<Updated upstream
-    private void detectCollisions(){
+    public void detectCollisions() {
+        if ((enemy1.posX <= (2.67f)) && (KEngine.playerBankPosY <= 1.4f) && (enemy1.posX > (1.1f))) {
+            enemy1.posX = (randomPos.nextFloat() * 7) + 7;
 
-           if((enemy1.posX < (2f) )&& (KEngine.playerBankPosY <= 1.3f)&&(enemy1.posX > (0.43f))) {
-               enemy1.posX = (randomPos.nextFloat() * 7) + 7;
-               //show.alert
-           }
-            if((enemy2.posX < (2f) )&& (KEngine.playerBankPosY <= 1.3f)&&(enemy2.posX > (0.43f))){
-                   enemy2.posX = (randomPos.nextFloat() * 7) + 7;
-               }
+            kGameInterface.onColisionDetection();
 
-                        =======
-                        public void detectCollisions () {
-                            if ((enemy1.posX <= (2.67f)) && (KEngine.playerBankPosY <= 1.4f) && (enemy1.posX > (1.1f))) {
-                                enemy1.posX = (randomPos.nextFloat() * 7) + 7;
-                                >>>>>>>Stashed changes
+        }
+        if ((enemy2.posX <= (2.67f)) && (KEngine.playerBankPosY <= 1.4f) && (enemy2.posX > (1.1f))) {
+            enemy2.posX = (randomPos.nextFloat() * 7) + 7;
+            kGameInterface.onColisionDetection();
+        }
 
-                                kGameInterface.onColisionDetection();
-
-                            }
-                            if ((enemy2.posX <= (2.67f)) && (KEngine.playerBankPosY <= 1.4f) && (enemy2.posX > (1.1f))) {
-                                enemy2.posX = (randomPos.nextFloat() * 7) + 7;
-                                kGameInterface.onColisionDetection();
-                            }
-
-                        }
+    }
 
 }
 

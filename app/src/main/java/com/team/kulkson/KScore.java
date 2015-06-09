@@ -14,14 +14,15 @@ public class KScore extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wyniki);
 
-
         final KEngine silnik = new KEngine();
 
-
-
         // stowrzenie obiektów dla przycisków
+        <<<<<<<Updated upstream
 
 
+        =======
+        Button powrot1 = (Button) findViewById(R.id.powrot1);
+        >>>>>>>Stashed changes
         TextView tekst2=(TextView)findViewById(R.id.wynik2);
         TextView tekst=(TextView)findViewById(R.id.wynik);
 
@@ -42,8 +43,16 @@ public class KScore extends ActionBarActivity {
 //
 //            }
 
+        <<<<<<<Updated upstream
 
         //});
+        =======
+        KScore.this.startActivity(game);
+    }
+
+
+});
+        >>>>>>>Stashed changes
 
     }
 }

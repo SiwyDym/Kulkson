@@ -1,9 +1,11 @@
 package com.team.kulkson;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MotionEvent;
+import android.view.accessibility.AccessibilityEvent;
 
 
 //trzeba powiązać Kgame z projektem poprzez AndroidMAnifest
@@ -23,13 +25,21 @@ public class KGame extends Activity { //dziedziczenie z klasy Activity
         return false;
 
     }
+
     @Override
     public void onCreate(Bundle savedInstanceBundle){
         super.onCreate(savedInstanceBundle);
-        gameView = new KGameView(this);
+        gameView = new KGameView(this, new KGameView.KGameInterface() {
+            @Override
+            public void onColisionDetection() {
+                finish();
+                Intent intent = new Intent(KGame.this, KScore.class);
+                startActivity(intent);
+
+            }
+        });
+
         setContentView(gameView);
-        //        super.onCreate(savedInstanceState);   w MARCINA PLIKU TAK BYŁO
-        // setContentView(R.layout.plansza_gry_2);
     }
 
     @Override
@@ -42,7 +52,5 @@ public class KGame extends Activity { //dziedziczenie z klasy Activity
     @Override
     public void onPause(){ //zatrzymuje wykonywanie czynności
         super.onPause();
-        gameView.onPause();
-
     }
 }

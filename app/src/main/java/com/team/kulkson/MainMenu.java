@@ -69,13 +69,8 @@ public class MainMenu extends ActionBarActivity {
             if(clean)
             {
 
-
-
-
-
                 int pid=android.os.Process.myPid();
                 android.os.Process.killProcess(pid);
-
 
             }
         }
